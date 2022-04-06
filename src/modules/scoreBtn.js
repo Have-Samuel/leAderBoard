@@ -6,7 +6,7 @@ const scoreForm = document.querySelector('#addScore');
 const scoreName = scoreForm.querySelectorAll('input')[0];
 const scoreVal = scoreForm.querySelectorAll('input')[1];
 
-const formBtn = () => {
+const formButton = () => {
   scoreForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (scoreName.value !== '' && scoreVal.value >= 0) {
@@ -18,6 +18,6 @@ const formBtn = () => {
   });
 };
 
-export default formBtn;
+export default formButton;
 
 // TODO: Change scoreVal to type text [numbers | > 0]
