@@ -1,9 +1,12 @@
+import formButton from "./scoreBtn";
+
+/* eslint-disable no-undef */
 const scoreHTML = document.querySelector('#scoreList');
 
 export const gameScores = [];
 
 export const createGame = async () => {
-  let gameId = null;
+  const gameId = null;
   try {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
       method: 'POST',
@@ -74,6 +77,17 @@ const addScore = async (name, value) => {
 
   scoreElement.innerHTML = `${name} : ${value}`;
   scoreHTML.appendChild(scoreElement);
+};
+
+export const addTask = () => {
+  form.addEventLister('submit', (e) => {
+    e.prevent();
+    task = form.elementd[0].value;
+    task.index = task.length;
+    task.push(task);
+    localStorage.JSON.stringify(task);
+    form.elements.item.value = '';
+  });
 };
 
 export default addScore;

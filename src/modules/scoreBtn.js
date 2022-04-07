@@ -19,3 +19,5 @@ const formButton = () => {
 };
 
 export default formButton;
+
+// TODO: Change scoreVal to type text [numbers | > 0]
