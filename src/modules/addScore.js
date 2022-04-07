@@ -1,5 +1,6 @@
-
 const scoreHTML = document.querySelector('#scoreList');
+
+export const gameScores = [];
 
 export const createGame = async () => {
   let gameId = null;
@@ -27,24 +28,46 @@ export const createGame = async () => {
 // Create a game
 // to get an ID, save that ID
 // create a URL endpoint with that ID
-const createScore = async (user, score) => {
+export const createScore = async (user, score) => {
   try {
-    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/LUaUfqXVzn1hoUXCyr49/scores', {
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1X4L9BvajAtPoRbnJWAH/scores/', {
       method: 'POST',
-      body: { User: user, Score: score },
+      body: JSON.stringify({
+        user,
+        score,
+      }),
       headers: {
         'Content-type': 'application/json; charaset=UTF-8',
       },
     });
     if (response.ok) {
       // get game ID
-      game.scores.push({ user, score });
+      gameScores.push({ user, score });
     }
   } catch (error) {
-    return error.massage;
+    console.log(error.message);
+    return error.message;
   }
   return null || { user, score };
 };
+
+const getScores = async () => {
+  let allScores = null;
+  try {
+    const response = await fetch(endpoints.scores);
+    if (response.ok) {
+      // get game ID
+      const data = await response.json();
+      allScores = data.result;
+    }
+  } catch (error) {
+    console.log(error.message);
+    return error.message;
+  }
+  return null || allScores;
+};
+
+export { getScores };
 
 const addScore = async (name, value) => {
   const scoreElement = document.createElement('li');
