@@ -1,14 +1,4 @@
-class List {
-  constructor() {
-    this.list = [];
-  }
-
-  add = (inName, inScore) => {
-    const score = { name: inName, score: inScore };
-    this.list.push(score);
-  };
-}
-
-const scoreList = new List();
-
-export { List, scoreList };
+// create a function that displays data after the refresh button retrives it
+// an eventListener for the btn
+// recieve data from the API
+// get an array

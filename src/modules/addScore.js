@@ -1,36 +1,7 @@
-import formButton from "./scoreBtn";
-
 /* eslint-disable no-undef */
-const scoreHTML = document.querySelector('#scoreList');
 
 export const gameScores = [];
 
-export const createGame = async () => {
-  const gameId = null;
-  try {
-    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
-      method: 'POST',
-      body: JSON.stringify({
-        name: 'HaveGame',
-      }),
-      headers: {
-        'content-type': 'application/json; charset=UTF-8',
-      },
-    });
-    if (response.ok) {
-      // get game ID
-      const data = await response.json();
-      console.log(data);
-    }
-  } catch (error) {
-    return error.message;
-  }
-  return gameId;
-};
-
-// Create a game
-// to get an ID, save that ID
-// create a URL endpoint with that ID
 export const createScore = async (user, score) => {
   try {
     const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1X4L9BvajAtPoRbnJWAH/scores/', {
@@ -44,50 +15,33 @@ export const createScore = async (user, score) => {
       },
     });
     if (response.ok) {
-      // get game ID
-      gameScores.push({ user, score });
+      const List = document.querySelector('#scoreList');
+      const newlist = document.createElement('li');
+      newlist.innerHTML = `Name: ${user}, Score: ${score}`;
+      List.appendChild(newlist);
     }
   } catch (error) {
-    console.log(error.message);
     return error.message;
   }
   return null || { user, score };
 };
 
-const getScores = async () => {
-  let allScores = null;
+export const getScores = async (user, score) => {
   try {
-    const response = await fetch(endpoints.scores);
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1X4L9BvajAtPoRbnJWAH/scores/', {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json; charaset=UTF-8',
+      },
+    });
     if (response.ok) {
-      // get game ID
-      const data = await response.json();
-      allScores = data.result;
+      const List = document.querySelector('#scoreList');
+      const newlist = document.createElement('li');
+      newlist.innerHTML = `Name: ${user}, Score: ${score}`;
+      List.appendChild(newlist);
     }
   } catch (error) {
-    console.log(error.message);
     return error.message;
   }
-  return null || allScores;
+  return null || { user, score };
 };
-
-export { getScores };
-
-const addScore = async (name, value) => {
-  const scoreElement = document.createElement('li');
-
-  scoreElement.innerHTML = `${name} : ${value}`;
-  scoreHTML.appendChild(scoreElement);
-};
-
-export const addTask = () => {
-  form.addEventLister('submit', (e) => {
-    e.prevent();
-    task = form.elementd[0].value;
-    task.index = task.length;
-    task.push(task);
-    localStorage.JSON.stringify(task);
-    form.elements.item.value = '';
-  });
-};
-
-export default addScore;
