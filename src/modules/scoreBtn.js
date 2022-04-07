@@ -1,17 +1,19 @@
 /* eslint-disable import/extensions */
-// import { addScore } from './addScore.js';
-import { scoreList } from './scoreList.js';
+import { createScore } from './addScore.js';
 
-const scoreForm = document.querySelector('#addScore');
+const scoreForm = document.querySelector('form');
 const scoreName = scoreForm.querySelectorAll('input')[0];
 const scoreVal = scoreForm.querySelectorAll('input')[1];
 
 const formButton = () => {
+  console.log('isLoading');
   scoreForm.addEventListener('submit', (e) => {
+    console.log('onClick');
     e.preventDefault();
     if (scoreName.value !== '' && scoreVal.value >= 0) {
+      console.log('Hello');
       // addScore(scoreName.value, scoreVal.value);
-      scoreList.add(scoreName.value, scoreVal.value);
+      createScore(scoreName.value, scoreVal.value);
       scoreName.value = '';
       scoreVal.value = '';
     }
@@ -19,5 +21,3 @@ const formButton = () => {
 };
 
 export default formButton;
-
-// TODO: Change scoreVal to type text [numbers | > 0]
