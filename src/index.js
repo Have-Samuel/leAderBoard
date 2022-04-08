@@ -7,7 +7,6 @@ import {
 } from './modules/addScore.js';
 import refresh from './modules/scoreList';
 
-// createScore('HAve', 77);
 getScores();
 formButton();
 refresh();

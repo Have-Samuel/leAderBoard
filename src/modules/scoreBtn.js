@@ -9,7 +9,6 @@ const formButton = () => {
   scoreForm.addEventListener('submit', (e) => {
     e.preventDefault();
     if (scoreName.value !== '' && scoreVal.value >= 0) {
-      // addScore(scoreName.value, scoreVal.value);
       createScore(scoreName.value, scoreVal.value);
       scoreName.value = '';
       scoreVal.value = '';
