@@ -1,62 +1,49 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
-
-# Project Name
-
-> Description the project.
-
+# LeaderBoard
+Leaderboard list app using APIs
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
+- WebPack
+- HTML & CSS
+- Javascript
 
 ### Prerequisites
-
-### Setup
-
-### Install
+If you haven't yet, you should first [set up Git.](https://docs.github.com/en/get-started/quickstart/set-up-git) Don't forget to [set up authentication to GitHub.com from Git](https://docs.github.com/en/get-started/quickstart/set-up-git#next-steps-authenticating-with-github-from-git) as well.
 
 ### Usage
+- Clone the repository
+  - Above the list of files, click **↓Code**
+  - Clone with HTTPS
+  - Open Terminal
+  - Change the current working directory to the location where you want the cloned directory
+  - Type `git clone`, and then paste the URL you copied earlier
+  - Press Enter. Your local clone will be created
+- Install webpack
+  - Required to run `npm init -y`
+  - Webpack `npm install webpack webpack-cli --save-dev`
+  - HTML plugin `npm install --save-dev html-webpack-plugin`
+  - CSS plugin `npm install --save-dev style-loader css-loader`
+  - Live Server `npm install --save-dev webpack-dev-server`
 
-### Run tests
+  For the Live Server `npm start` http://localhost:8082/
 
-### Deployment
+## Author
 
+👤 **Have Samuel Kabareebe**
 
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Have]((https://github.com/Have-Samuel)
+- Twitter: [@Have](https://twitter.com/samhave1)
+- LinkedIn: [Have](https://linkedin.com/in/https://www.linkedin.com/in/have-samuel-kabareebe-0404a312a/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to get in touch with any issues or suggestions.
+
+- 🐛 **Bug reports & issues:** Use [GitHub Issues](https://git@github.com:Have-Samuel/leAderBoard.git/issues "Bugs & Issues")
+- 💡 **Suggestions:** Use [Github Discussions](https://git@github.com:Have-Samuel/leAderBoard.git/discussions "Suggestions")
+- 🙋‍♀️ **General questions:** Use [Github Discussions](https://git@github.com:Have-Samuel/leAderBoard.git/discussions "General Questions")
 
 ## Show your support
 
