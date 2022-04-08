@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-
 export const gameScores = [];
 
 export const createScore = async (user, score) => {
