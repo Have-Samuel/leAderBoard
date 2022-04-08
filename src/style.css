@@ -1,5 +1,6 @@
 body {
   font-family: cursive;
+  background: #4aafbd;
 }
 
 h1 {
@@ -27,6 +28,9 @@ h1 {
   box-shadow: 2px 2px #000;
   padding: 0.3rem;
   margin-right: 4rem;
+  border-radius: 1rem;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .baseButton {
@@ -34,6 +38,9 @@ h1 {
   background: none;
   box-shadow: 2px 2px #000;
   padding: 0.3rem;
+  font-weight: 800;
+  font-size: 14px;
+  border-radius: 1rem;
 }
 
 .baseButton:hover {
@@ -44,16 +51,20 @@ h1 {
   list-style: none;
   margin: 0;
   padding: 0;
-  border: 2px solid #000;
+  border: 2px solid rgb(133, 108, 108);
+  overflow-y: auto;
+  max-height: 20rem;
 }
 
 #scoreList li {
-  background-color: #ddd;
+  background-color: rgb(138, 126, 126);
   padding: 3px;
+  color: #eee;
 }
 
 #scoreList li:nth-child(odd) {
-  background-color: #fff;
+  background-color: #493e3e;
+  color: #eee;
 }
 
 #addScore {
@@ -67,4 +78,5 @@ h1 {
   box-sizing: border-box;
   padding: 5px;
   border: 2px solid #000;
+  color: rgb(20, 3, 3);
 }
