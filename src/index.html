@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeaderBoard Exercise</title>
+    <title>LeaderBoard</title>
 </head>
 <body>
     <h1>LeaderBoard</h1>
-    <div>
-      <h4>Recent scores</h4>
-      <button type="button">Refresh</button>
-
+    <section id="whole">
       <div>
-        <h4>Add your score</h4>
-        <input type="text" placeholder="Your name">
-        <br>
-        <br>
-        <input type="text" placeholder="Your score">
-        <br>
-        <br>
-        <button type="button">Submit</button>
-      </div>
+      <div class="heading">
+      <h4>Recent scores</h4>
+      <button id="refreshBtn" type="button">Refresh</button>
     </div>
+    <ul id="scoreList">
+      
+      </ul>
+      </div>
+      <form id="addScore">
+        <h3>Add your score</h3>
+        <input class="text" type="text" name="name" placeholder="Your name" required>
+        <br>
+        <input class="text" type="text" name="score" placeholder="Your score" required>
+        <br>
+        <button class="baseButton" type="submit">Submit</button>
+      </form>
+    </section>
 </body>
 </html>

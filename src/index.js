@@ -1,14 +1,12 @@
-import _ from 'lodash';
+/* eslint-disable import/extensions */
 import './style.css';
+import formButton from './modules/scoreBtn.js';
+// eslint-disable-next-line no-unused-vars
+import {
+  getScores,
+} from './modules/addScore.js';
+import refresh from './modules/scoreList';
 
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+getScores();
+formButton();
+refresh();
